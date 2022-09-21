@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  background-color: #d2ced6;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 600px;
+  padding: 50px;
+}
+.el {
+  display: flex;
+  border-radius: 5px;
+}
+
+.nr1,
+.nr4 {
+  background-color: #f8d668;
+  flex: 1 1 100%;
+  min-height: 40px;
+  margin: 5px;
+}
+.nr2-1,
+.nr2-2 {
+  background-color: #28aea3;
+  flex: 1 1 100%;
+  min-height: 40px;
+  margin: 5px;
+}
+.nr3-1,
+.nr3-2,
+.nr3-3,
+.nr3-4 {
+  background-color: #156298;
+  flex: 1 1 100%;
+  min-height: 40px;
+  margin: 5px;
+}

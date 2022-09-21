@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 4rem;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 53rem;
+}
+img {
+  width: 45rem;
+  height: 50rem;
+  margin: 4rem 4rem 0 4rem;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+.reactions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.tsimg {
+  background-color: #e6e6e6;
+  margin-bottom: 5rem;
+}
+svg {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+svg:hover {
+  scale: 150%;
+  transform: rotateZ(360deg);
+  transition: all 1s;
+}
+.star {
+  color: #ffa500;
+}
+.heart1,
+.heart2,
+.heart3 {
+  margin-left: 4rem;
+}
+.heart1,
+.heart3 {
+  color: #e6e6e6;
+}
+.heart2 {
+  color: #ff0000;
+}
+.heart1:hover,
+.heart2:hover,
+.heart3:hover {
+  color: #ff0000;
+}
+p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #999999;
+  text-align: center;
+}
+.description {
+  margin-bottom: 3rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: auto;
+}
+.cart-button {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2.8rem;
+  border: 0.3rem solid #000;
+}
+.view-button {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #000;
+  text-decoration: none;
+  padding: 1rem 2.8rem;
+  border: 0.3rem solid #000;
+}
+a:hover {
+  scale: 1.2;
+  transition: all 0.7s;
+}

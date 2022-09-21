@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1300px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 80px;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  list-style: none;
+  padding: 20px 50px;
+  background-color: #036ffc;
+}
+header a:link,
+header a:visited {
+  font-weight: 700;
+  font-size: 30px;
+  color: #e6f1ff;
+  text-decoration: none;
+}
+header a:hover,
+header a:active {
+  font-weight: 700;
+  font-size: 30px;
+  color: #e6f1ff;
+  text-decoration: none;
+}
+.informations {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 250px;
+  border-right: 2px solid #000;
+  padding-right: 15px;
+  margin-right: 15px;
+}
+.informations p {
+  font-size: 25px;
+  font-weight: 500;
+}
+table {
+  margin-left: auto;
+}
+td {
+  font-size: 18px;
+}
+.tech-image {
+  max-width: 1300px;
+}
+.hero {
+  position: relative;
+}
+.hero-description {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  max-width: 300px;
+  color: #e6f1ff;
+  background-color: #036ffc;
+  padding: 20px;
+}
+.hero-description h2 {
+  border-bottom: 2px dotted #e6f1ff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6f1ff;
+  background-color: #036ffc;
+  padding: 10px 30px;
+  max-width: fit-content;
+  position: absolute;
+  bottom: -35px;
+  right: 40px;
+}
+h1 {
+  font-size: 80px;
+  margin-right: 20px;
+}
+.right-arrow {
+  width: 60px;
+  -webkit-filter: invert(100%);
+  filter: 100%;
+}
+.article-nr1 {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 2px dashed #000;
+}
+.article1-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6e6;
+  flex: 1 1 33%;
+  padding: 30px;
+  position: relative;
+}
+.article1-section h2 {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #014c10;
+}
+.generic-pic {
+  width: 240px;
+  height: 90px;
+  align-self: center;
+  padding: 5px;
+  border: 1px solid #000;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.article1-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.article1-section a:link,
+.article1-section a:visited,
+.article1-section a:hover,
+.article1-section a:active {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  text-decoration: none;
+  color: #036ffc;
+  font-weight: 700;
+}

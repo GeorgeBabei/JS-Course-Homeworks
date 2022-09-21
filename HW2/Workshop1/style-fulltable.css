@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  background-color: #d2ced6;
+  padding: 50px;
+}
+.myTable {
+  margin: 0 auto;
+  width: 510px;
+  height: 210px;
+  border-spacing: 10px;
+}
+.myTable tr td {
+  border-radius: 5px;
+}
+.orangeRow {
+  background-color: #f8d668;
+}
+.turquoiseRow {
+  background-color: #28aea3;
+}
+.blueRow {
+  background-color: #156298;
+}

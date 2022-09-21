@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  background-color: #d2ced6;
+  padding: 50px;
+  width: 650px;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+.el {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.nr1,
+.nr8 {
+  background-color: #f8d668;
+  min-width: 490px;
+  min-height: 40px;
+}
+.nr2,
+.nr3 {
+  background-color: #28aea3;
+  min-width: 240px;
+  min-height: 40px;
+}
+.nr4,
+.nr5,
+.nr6,
+.nr7 {
+  background-color: #156298;
+  min-width: 115px;
+  min-height: 40px;
+}
