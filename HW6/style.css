@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #413e9a, #44c6c5);
+  background-attachment: fixed;
+  position: relative;
+}
+input::placeholder {
+  color: #1a193e;
+  opacity: 50%;
+}
+#city {
+  text-transform: capitalize;
+}
+#city-input {
+  text-align: center;
+  width: 30rem;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  outline: none;
+  border: 0.5rem dashed #0b0746;
+  padding: 1rem;
+}
+#temperature-button {
+  margin-right: 5rem;
+}
+.temp--btn {
+  width: 20rem;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  background-color: #44c6c5;
+  color: #0b0746;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.temp--btn:active {
+  background: #a2e3e2;
+}
+.btns--div {
+  display: flex;
+  justify-content: center;
+}
+#temperature-section {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#temperature-container {
+  font-size: 3rem;
+  color: #0b0746;
+}
+#city {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0b0746;
+}
+#temperature {
+  font-size: 3rem;
+  color: #0b0746;
+  font-weight: 700;
+}
+
+#posts-container {
+  border: 0.2rem dashed #000;
+  margin: 2rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.post--title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  padding-right: 4rem;
+}
+.post--title::first-letter {
+  text-transform: capitalize;
+}
+.post--body {
+  font-size: 1.8rem;
+  padding-right: 3.5rem;
+}
+.post--body::first-letter {
+  text-transform: capitalize;
+}
+.generated--post {
+  position: relative;
+  border: 0.2rem solid #000;
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+#delete-button {
+  border: none;
+  border-radius: 1rem;
+  background-color: #d16464;
+  color: #ffffff;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+}
+#edit-button {
+  border: none;
+  border-radius: 1rem;
+  background-color: #09ff00;
+  color: #000000;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 4rem;
+  right: 0.4rem;
+}
+#edit-button:active {
+  background-color: #428a40;
+}
+#delete-button:active {
+  background-color: #7a3d3d;
+}
+#modal-cover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.3rem);
+  position: fixed;
+  z-index: 5;
+  top: 0;
+}
+#modal {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #413e9a, #44c6c5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+.modal--paragraph {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#title-textarea {
+  margin-bottom: 2rem;
+}
+textarea {
+  outline: none;
+  height: 10rem;
+  font-size: 2rem;
+  background: none;
+  border: 0.3rem dashed #000;
+  border-radius: 2rem;
+  border-top-left-radius: 0;
+  resize: none;
+  padding: 0.5rem;
+}
+.close--btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #44c6c5;
+  border-radius: 2rem;
+  border: 0.1rem solid #000;
+  cursor: pointer;
+}
+.cancel--btn {
+  width: 10rem;
+  margin: 2rem 0;
+  font-size: 2rem;
+  background-color: #44c6c5;
+  color: #0b0746;
+  border-radius: 1rem;
+  border: 0.2rem solid #000;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  right: 6rem;
+}
+.save--btn {
+  width: 10rem;
+  margin: 2rem 0;
+  font-size: 2rem;
+  background-color: #44c6c5;
+  color: #0b0746;
+  border-radius: 1rem;
+  border: 0.2rem solid #000;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  left: 6rem;
+}
+.close--btn:active,
+.cancel--btn:active,
+.save--btn:active {
+  background-color: #a2e3e2;
+}
+.hidden--class {
+  display: none;
+}

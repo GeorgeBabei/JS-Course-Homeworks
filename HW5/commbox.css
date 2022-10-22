@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #833ab4, #fd1d1d, #fcb045);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  background: linear-gradient(to bottom right, #3a55b4, #de6ff7, #fcb045);
+  box-shadow: 0px 0px 50px 10px rgb(105, 97, 97);
+  padding: 10px;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+#text--area {
+  padding: 5px 57px 5px 10px;
+  border: 1px solid #000;
+  background-color: #f1b193;
+  border-radius: 7px;
+  min-height: 62px;
+}
+.add-comment {
+  color: #f9ddd1;
+  background-color: #8d37db;
+  border: 2px solid #000;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 63px;
+  width: 63px;
+  cursor: pointer;
+}
+.add-comment:active {
+  background-color: #c69bed;
+}
+.comm-area {
+  border: 1px solid #f9ddd1;
+  border-radius: 10px;
+  display: flex;
+  /* flex-direction: column-reverse; */
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  min-height: 80%;
+  margin-bottom: 30px;
+}
+.comm-area::-webkit-scrollbar {
+  width: 0;
+}
+.comment {
+  display: flex;
+  align-items: flex-end;
+  max-width: 100%;
+  padding: 5px;
+}
+.delete-comm {
+  padding: 5px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #f9ddd1;
+  font-weight: 700;
+  background-color: #db3745;
+}
+.delete-comm:active {
+  background-color: #e9757f;
+}
+.comment-text {
+  background-color: #c69bed;
+  color: #000;
+  padding: 10px;
+  border-radius: 15px;
+}

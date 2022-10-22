@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <form name="form1" action="" id="myForm" onsubmit="return false">
+        <input type="text" name="fname" class="text" placeholder="First Name" id="first-text" required />
+        <input type="text" name="fname" class="text" placeholder="Last Name" id="second-text" required />
+        <label for="gender-selection">Gender</label>
+        <div class="radio1">
+          <label for="radio" class="btn-label"><input type="radio" name="radio" class="radio-btn" value="M" />M</label>
+          <label for="radio" class="btn-label"><input type="radio" name="radio" class="radio-btn" value="F" />F</label>
+        </div>
+        <textarea name="textarea" id="textarea" cols="30" rows="6" placeholder="Your message here"></textarea>
+        <input type="submit" name="submit" value="Submit" class="button" id="submit-btn"></input>
+      </form>
+      <img src="Screenshot_1.png" alt="picture" />
+    </div>
+    <div id="valid-div" class="hidden-div1">
+      <div class="svg-valid"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="validator">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+        </svg>
+      </div>
+      <p id="name-text">Text</p>
+      <button id="close-btn1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="nonvalid-div" class="hidden-div2">
+      <div class="svg-nonvalid"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="nonvalidator">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+      <p>Please fill the required fields!</p>
+      <button id="close-btn2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </main>
+  <script src="form.js"></script>
+</body>
+
+</html>

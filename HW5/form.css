@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  margin-top: 350px;
+  justify-content: center;
+}
+main {
+  position: relative;
+  max-width: inherit;
+}
+.container {
+  display: flex;
+  border: 1px solid #000;
+  padding: 20px 15px 10px 50px;
+  gap: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+img {
+  width: 200px;
+  height: auto;
+}
+.text {
+  margin-bottom: 15px;
+}
+.text-red {
+  border: 2px solid #ff0000;
+  border-radius: 2px;
+}
+.text-ok {
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+.btn-label {
+  display: flex;
+  gap: 5px;
+  margin-left: 50px;
+}
+.radio1 {
+  margin-bottom: 10px;
+}
+input::placeholder {
+  color: #cccccc;
+}
+.button {
+  align-self: flex-end;
+  background-color: #09869c;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #4d4d4d;
+  cursor: pointer;
+}
+.vld-div1,
+.vld-div2,
+.hidden-div1,
+.hidden-div2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -50px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+svg {
+  width: 24px;
+  height: 24px;
+}
+#close-btn1,
+#close-btn2 {
+  display: flex;
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+}
+#close-btn1 {
+  background-color: #cce6cc;
+}
+#close-btn2 {
+  background-color: #ffe6e6;
+}
+.vld-div1 {
+  background-color: #cce6cc;
+  transform: scaleY(1);
+  transition: transform 200ms ease 0ms;
+}
+.hidden-div1 {
+  background-color: #cce6cc;
+  transform: scaleY(0);
+  transition: transform 200ms ease 0ms;
+}
+.vld-div2 {
+  background-color: #ffe6e6;
+  transform: scaleY(1);
+  transition: transform 200ms ease 0ms;
+}
+.hidden-div2 {
+  background-color: #ffe6e6;
+  transform: scaleY(0);
+  transition: transform 200ms ease 0ms;
+}
+#valid-div p {
+  color: #339933;
+  font-weight: bold;
+}
+#nonvalid-div p {
+  color: #ff0000;
+  font-weight: bold;
+}
+.validator {
+  stroke: #e6f2e6;
+}
+.nonvalidator {
+  stroke: #ffe6e6;
+}
+.svg-nonvalid {
+  display: flex;
+  margin-right: 20px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+}
+.svg-valid {
+  display: flex;
+  margin-right: 20px;
+  background-color: #66b366;
+  border-radius: 50%;
+}
+
+#textarea {
+  margin-bottom: 20px;
+}
