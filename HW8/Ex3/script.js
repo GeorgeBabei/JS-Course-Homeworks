@@ -22,7 +22,8 @@ const clonedCar = {
   ...car,
   modelYear: 2022,
   settings: {
-    wheels: 5,
+    ...car.settings,
+    wheels: 4,
     engine: "electric",
   },
 };
