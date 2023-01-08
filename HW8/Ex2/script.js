@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  // ...smthing --> rest parameters
+  // ...smthing --> rest parameter
   const addNumbers = (...numbers) => {
     let sum = 0;
     for (let i = 0; i < numbers.length; i++) {

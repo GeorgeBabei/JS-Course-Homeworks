@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Posts</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <section id="temperature-section">
-        <input type="text" id="city-input" placeholder="Type location">
-        <div class="btns--div">
-            <button id="temperature-button" class="temp--btn">Get Temperature</button>
-            <button id="clear-temperature" class="temp--btn">Clear</button>
+    <body>
+        <section id="temperature-section">
+            <input type="text" id="city-input" placeholder="Type location">
+            <div class="btns--div">
+                <button id="temperature-button" class="temp--btn">Get Temperature</button>
+                <button id="clear-temperature" class="temp--btn">Clear</button>
+            </div>
+            <div id="temperature-container" style="display: none;">
+                Current temperature in <span id="city"></span> is: <span id="temperature"></span> &#8451.
+            </div>
+        </section>
+        <div id="posts-container"></div>
+        <div id="modal-cover" class="hidden--class">
+            <div id="modal">
+                <p class="modal--paragraph">Change title</p>
+                <textarea name="" id="title-textarea" cols="3" rows="1"></textarea>
+                <p class="modal--paragraph">Change text</p>
+                <textarea name="" id="body-textarea" cols="3" rows="1"></textarea>
+                <button class="close--btn">X</button>
+                <button class="save--btn">Save</button>
+                <button class="cancel--btn">Cancel</button>
+            </div>
         </div>
-        <div id="temperature-container" style="display: none;">
-            Current temperature in <span id="city"></span> is: <span id="temperature"></span> &#8451.
-        </div>
-    </section>
-    <div id="posts-container"></div>
-    <div id="modal-cover" class="hidden--class">
-        <div id="modal">
-            <p class="modal--paragraph">Change title</p>
-            <textarea name="" id="title-textarea" cols="3" rows="1"></textarea>
-            <p class="modal--paragraph">Change text</p>
-            <textarea name="" id="body-textarea" cols="3" rows="1"></textarea>
-            <button class="close--btn">X</button>
-            <button class="save--btn">Save</button>
-            <button class="cancel--btn">Cancel</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 
 </html>

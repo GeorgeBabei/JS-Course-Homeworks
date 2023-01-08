@@ -5,10 +5,10 @@
   font-size: 62.5%;
 }
 body {
-  height: 100vh;
   background: linear-gradient(to bottom, #413e9a, #44c6c5);
   background-attachment: fixed;
   position: relative;
+  margin-bottom: 3rem;
 }
 input::placeholder {
   color: #1a193e;
@@ -70,11 +70,13 @@ input::placeholder {
 
 #posts-container {
   border: 0.2rem dashed #000;
-  margin: 2rem;
+  margin: 2rem auto;
+  min-width: 500px;
+  max-width: 70%;
   padding: 1rem 1rem 1rem 1rem;
 }
 .post--title {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   padding-right: 4rem;
 }

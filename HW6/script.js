@@ -1,76 +1,108 @@
-function weatherGenerator() {
-  var weatherBaseUrl = "https://api.weatherapi.com/v1";
-  var weatherApiKey = "d3bf8d16a067407cad8193603221910";
-  var cityInput = document.querySelector("#city-input");
-  var temperatureButtonEl = document.querySelector("#temperature-button");
-  var temperatureContainerEl = document.querySelector("#temperature-container");
-  var clearCityButtonEl = document.querySelector("#clear-temperature");
-  temperatureButtonEl.addEventListener("click", onTemperatureButtonClick);
-  clearCityButtonEl.addEventListener("click", clearCityButtonClick);
+const weatherGenerator = () => {
+  const weatherBaseUrl = "https://api.weatherapi.com/v1";
+  const weatherApiKey = "d3bf8d16a067407cad8193603221910";
+  const cityInput = document.querySelector("#city-input");
+  const temperatureButtonEl = document.querySelector("#temperature-button");
+  const temperatureContainerEl = document.querySelector(
+    "#temperature-container"
+  );
+  const clearCityButtonEl = document.querySelector("#clear-temperature");
 
-  function clearCityButtonClick() {
+  const clearCityButtonClick = () => {
     if (cityInput) {
       cityInput.value = "";
       temperatureContainerEl.style = "display: none";
     }
-  }
+  };
 
-  function onTemperatureButtonClick() {
-    var queryParams = "key=" + weatherApiKey + "&q=" + cityInput.value;
-
+  const onTemperatureButtonClick = () => {
+    const queryParams = "key=" + weatherApiKey + "&q=" + cityInput.value;
     fetch(weatherBaseUrl + "/current.json?" + queryParams)
-      .then(function (response) {
+      .then((response) => {
         return response.json();
       })
-      .then(function (weather) {
+      .then((weather) => {
         console.log(weather);
-        var temperature = weather.current.temp_c;
+        const temperature = weather.current.temp_c;
         if ((temperature.is = Number)) {
           temperatureContainerEl.style = null;
-          var cityElement = document.querySelector("#city");
+          const cityElement = document.querySelector("#city");
           cityElement.innerHTML = cityInput.value;
-          var temperatureElement =
+          const temperatureElement =
             temperatureContainerEl.querySelector("#temperature");
           temperatureElement.innerHTML = temperature;
         }
       });
-  }
-}
+  };
+  temperatureButtonEl.addEventListener("click", onTemperatureButtonClick);
+  clearCityButtonEl.addEventListener("click", clearCityButtonClick);
+};
 
-function postsGenerator() {
-  var postsBaseUrl = "https://jsonplaceholder.typicode.com";
-  var postsContainerEl = document.querySelector("#posts-container");
-  var titleTextareaVal = document.querySelector("#title-textarea");
-  var bodyTextareaVal = document.querySelector("#body-textarea");
-  var modalCloseButton = document.querySelector(".close--btn");
-  var modalCancelButton = document.querySelector(".cancel--btn");
-  var modalSaveButton = document.querySelector(".save--btn");
-  var modalDiv = document.querySelector("#modal-cover");
-  modalCloseButton.addEventListener("click", closeModal);
-  modalCancelButton.addEventListener("click", closeModal);
+const postsGenerator = () => {
+  const postsBaseUrl = "https://jsonplaceholder.typicode.com";
+  const postsContainerEl = document.querySelector("#posts-container");
+  const titleTextareaVal = document.querySelector("#title-textarea");
+  const bodyTextareaVal = document.querySelector("#body-textarea");
+  const modalCloseButton = document.querySelector(".close--btn");
+  const modalCancelButton = document.querySelector(".cancel--btn");
+  const modalSaveButton = document.querySelector(".save--btn");
+  const modalDiv = document.querySelector("#modal-cover");
+  const generatedPost = document.querySelector("#generated--post");
 
-  function renderPostsList(posts) {
-    posts.forEach(function (post) {
-      var postDiv = createPost(post);
+  const renderPostsList = (posts) => {
+    posts.forEach((post) => {
+      const postDiv = createPost(post);
+
+      const closeModal = () => {
+        modalDiv.classList.add("hidden--class");
+      };
 
       if (postDiv) {
         postsContainerEl.appendChild(postDiv);
-        document.querySelectorAll("#edit-button").forEach(function (btn) {
-          btn.addEventListener("click", openModal);
+        modalCloseButton.addEventListener("click", closeModal);
+        modalCancelButton.addEventListener("click", closeModal);
+
+        const openModal = () => {
+          if (modalDiv.classList.contains("hidden--class")) {
+            modalDiv.classList.remove("hidden--class");
+            titleTextareaVal.innerHTML = post.title;
+            bodyTextareaVal.innerHTML = post.body;
+          }
+        };
+
+        document.querySelectorAll("#edit-button").forEach((button) => {
+          button.addEventListener("click", openModal);
         });
+        const deleteButton = document.querySelector("#delete-button");
+        deleteButton.onclick = () => {
+          fetch(postsBaseUrl + "/posts/" + post.id, {
+            method: "DELETE",
+            headers: {
+              "Content-type": "applicaton/json",
+            },
+          })
+            .then((res) => {
+              if (res.ok) {
+                generatedPost.remove();
+              } else {
+                console.log("Can't delete");
+              }
+              return res;
+            })
+            .then((res) => res.json())
+            .then((data) => console.log(data));
+        };
       }
     });
-  }
+  };
 
-  function createPost(post) {
-    var div = document.createElement("div");
+  const createPost = (post) => {
+    const div = document.createElement("div");
     div.innerHTML =
       "<div class='generated--post'>" +
-      "<div class='post--title'>" +
-      "<h2>" +
+      "<h2 class='post--title'>" +
       post.title +
       "</h2>" +
-      "</div>" +
       "<p class='post--body'>" +
       post.body +
       "</p>" +
@@ -82,7 +114,7 @@ function postsGenerator() {
       "'>X</button>" +
       "</div>";
     return div;
-  }
+  };
 
   fetch(postsBaseUrl + "/posts")
     .then(function (response) {
@@ -91,43 +123,12 @@ function postsGenerator() {
     .then(function (posts) {
       renderPostsList(posts);
     });
+};
 
-  function openModal(post) {
-    if (modalDiv.classList.contains("hidden--class")) {
-      modalDiv.classList.remove("hidden--class");
-      titleTextareaVal.value = post.title;
-      bodyTextareaVal.value = post.body;
-    }
-  }
-
-  function closeModal() {
-    modalDiv.classList.add("hidden--class");
-    titleTextareaVal.value = "";
-    bodyTextareaVal.value = "";
-  }
-}
-
-var pageInit = function () {
+const pageInit = () => {
   weatherGenerator();
   postsGenerator();
 };
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   pageInit();
 });
-
-// modalSaveButton.addEventListener("click", function () {
-//   if (!modalDiv.classList.contains("hidden--class")) {
-//     fetch(postsBaseUrl + "/posts/" + post.id, {
-//       method: "PUT",
-//       body: JSON.stringify({
-//         id: post.id,
-//         title: titleTextareaVal.value,
-//         body: bodyTextareaVal.value,
-//         userId: post.userId,
-//       }),
-//     }).then(function (response) {
-//       return response.json();
-//     });
-//     closeModal();
-//   }
-// });

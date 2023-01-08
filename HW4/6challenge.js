@@ -1,5 +1,10 @@
-const array = [0, 1];
-console.log(array[0], array[1], array[0], array[1]);
-console.log(array[1], array[0], array[1], array[0]);
-console.log(array[0], array[1], array[0], array[1]);
-console.log(array[1], array[0], array[1], array[0]);
+let num = 5;
+for (j = 0; j < num; j++) {
+  let numArr = [];
+  for (let i = 0; i < num; i++) {
+    if (i % 2 === 0) {
+      numArr.push(0);
+    } else numArr.push(1);
+  }
+  console.log(...numArr);
+}
